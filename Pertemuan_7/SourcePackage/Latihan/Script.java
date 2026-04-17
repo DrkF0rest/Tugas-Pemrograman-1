@@ -1,50 +1,57 @@
 import java.util.Scanner;
 
 public class Script {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        
         // Statement 1
-        System.out.println("Jurusan \nA. Teknik Informatika \nB.Tidak Valid");
-        String Pilihan = "";
+        System.out.println("Jurusan \nA. Teknik Informatika \nB. Tidak Valid");
+        
+        String pilihan = "";
         System.out.print("Masukkan pilihan (A/B): ");
-        Pilihan = input.nextLine();
+        pilihan = input.nextLine();
 
-        String Jurusan = "";
-        String Nama = "";
-        String Shift = "";
+        String jurusan = "";
+        String nama = "";
+        String shift = "";
         
         // Statement 2
-        if (Pilihan.equalsIgnoreCase("A")) {
-            Jurusan = "Teknik Informatika";
+        if (pilihan.equalsIgnoreCase("A")) {
+            jurusan = "Teknik Informatika";
+            
             System.out.print("Masukkan Nama: ");
-            Nama = input.nextLine();
+            nama = input.nextLine();
+            
             System.out.print("Masukkan Shift \n1. Reg A \n2. Reg B \n3. Reg CK \n4. Reg CS \n");
             System.out.print("Masukkan Reg (1-4): ");
-            int Reg = input.nextInt();
-            switch (Reg) {
+            int reg = input.nextInt();
+            
+            switch (reg) {
                 case 1:
-                    Shift = "Reg A";
+                    shift = "Reg A";
                     break;
                 case 2:
-                    Shift = "Reg B";
+                    shift = "Reg B";
                     break;
                 case 3:
-                    Shift = "Reg CK";
+                    shift = "Reg CK";
                     break;
                 case 4:
-                    Shift = "Reg CS";
+                    shift = "Reg CS";
                     break;
                 default:
-                    Shift = "Reg A";
+                    shift = "Reg A";
+                    break;
             }
-        } else if (Pilihan.equalsIgnoreCase("B")) {
+        } else if (pilihan.equalsIgnoreCase("B")) {
             System.out.println("Pilihan tidak valid");
             input.close();
         }
+        
         // Statement 4
-        System.out.println("Nama: " + Nama);
-        System.out.println("Jurusan: " + Jurusan);
-        System.out.println("Shift: " + Shift);
+        System.out.println("Nama: " + nama);
+        System.out.println("Jurusan: " + jurusan);
+        System.out.println("Shift: " + shift);
         
         input.close();
     }
